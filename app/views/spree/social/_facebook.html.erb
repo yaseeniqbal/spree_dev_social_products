@@ -4,8 +4,8 @@
     <meta property="og:type" content="product" />
     <meta property="og:url" content="<%= spree.product_url(@product) %>" />
     <meta property="og:description" content="<%= @product.description %>" />
-    <% @product.images.each do |img| %>
-      <meta property="og:image" content="<%#= absolute_image_url(img.attachment.url) %>" />
+    <% @product.images.each do |i| %>
+      <meta property="og:image" content="<%= image_tag(main_app.url_for(i.url(:mini))) %>" />
     <% end %>
     <meta property="fb:app_id" content="<%= Spree::Social::Config.preferred_facebook_app_id %>" />
   <% end %>
@@ -19,5 +19,6 @@
     data-show-faces="<%= Spree::Social::Config.preferred_facebook_show_faces %>"
     data-layout="<%= Spree::Social::Config.preferred_facebook_layout %>"
     data-colorscheme="<%= Spree::Social::Config.preferred_facebook_color_scheme %>"
-    data-action="<%= Spree::Social::Config.preferred_facebook_verb_to_display %>"></div>
+    data-action="<%= Spree::Social::Config.preferred_facebook_verb_to_display %>">
+  </div>
 <% end %>
