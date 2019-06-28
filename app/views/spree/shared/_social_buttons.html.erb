@@ -1,6 +1,6 @@
 <div id="social_nav">
-  <h6><%= Spree.t(:bookmark_or_share_this, scope: :social) %></h6>
-  <ul>
+  <!-- <h6><%#= Spree.t(:bookmark_or_share_this, scope: :social) %></h6> -->
+  <ul class="cth-sco-ul pull-left">
     <% if Spree::Social::Config.preferred_twitter_button %>
       <li class="twitter">
         <%= render 'spree/social/twitter' %>
@@ -31,8 +31,6 @@
         <%= render 'spree/social/google_plus' %>
       </li>
     <% end %>
-  </ul>
-  <ul class="facebook-like-button">
     <% if Spree::Social::Config.preferred_facebook_button %>
       <li class="facebook">
         <%= render 'spree/social/facebook' %>
