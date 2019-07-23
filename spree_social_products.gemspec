@@ -5,7 +5,7 @@ require 'spree_social_products/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_dev_social_products'
+  s.name        = 'spree_social_products'
   s.version     = SpreeSocialProducts.version
   s.summary     = 'Adds social network sharing to product pages'
   s.required_ruby_version = '>= 2.1.0'
