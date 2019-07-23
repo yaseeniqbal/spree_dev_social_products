@@ -1,24 +1,25 @@
 <% unless Spree::Social::Config.preferred_facebook_app_id.nil? %>
-  <% content_for :head do %>
-    <meta property="og:title" content="<%= @product.name %>" />
+<!--   <%# content_for :head do %>
+    <meta property="og:title" content="<%#= @product.name %>" />
     <meta property="og:type" content="product" />
-    <meta property="og:url" content="<%= spree.product_url(@product) %>" />
-    <meta property="og:description" content="<%= @product.description %>" />
-    <% @product.images.each do |i| %>
-      <meta property="og:image" content="<%= image_tag(main_app.url_for(i.url(:mini))) %>" />
-    <% end %>
-    <meta property="fb:app_id" content="<%= Spree::Social::Config.preferred_facebook_app_id %>" />
-  <% end %>
-
+    <meta property="og:url" content="<%#= spree.product_url(@product) %>" />
+    <meta property="og:description" content="<%#= @product.description %>" />
+    <%# @product.images.each do |i| %>
+      <meta property="og:image" content="<%#= image_tag(main_app.url_for(i.url(:mini))) %>" />
+    <%# end %>
+    <meta property="fb:app_id" content="<%#= Spree::Social::Config.preferred_facebook_app_id %>" />
+  <%# end %>
   <div id="fb-root"></div>
-
   <div
     class="fb-share-button"
-    data-send="<%= Spree::Social::Config.preferred_facebook_send_button %>"
+    data-send="<%#= Spree::Social::Config.preferred_facebook_send_button %>"
     data-width="450"
-    data-show-faces="<%= Spree::Social::Config.preferred_facebook_show_faces %>"
-    data-layout="<%= Spree::Social::Config.preferred_facebook_layout %>"
-    data-colorscheme="<%= Spree::Social::Config.preferred_facebook_color_scheme %>"
-    data-action="<%= Spree::Social::Config.preferred_facebook_verb_to_display %>">
-  </div>
+    data-show-faces="<%#= Spree::Social::Config.preferred_facebook_show_faces %>"
+    data-layout="<%#= Spree::Social::Config.preferred_facebook_layout %>"
+    data-colorscheme="<%#= Spree::Social::Config.preferred_facebook_color_scheme %>"
+    data-action="<%#= Spree::Social::Config.preferred_facebook_verb_to_display %>">
+  </div> -->
+   <a href="https://www.facebook.com/sharer/sharer.php?app_id=<%=Spree::Social::Config.preferred_facebook_app_id%>&sdk=joey&u=https://chillyfacts.com/create-facebook-share-button-for-website-webpages/&display=popup&ref=plugin&src=share_button" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')"><%= image_tag "fb-ico.svg", alt: "" %></a>
 <% end %>
+
+
