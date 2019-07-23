@@ -11,5 +11,5 @@
   <% end %>
 
   <div id="fb-root"></div>
-   <a href="https://www.facebook.com/sharer/sharer.php?app_id=<%=Spree::Social::Config.preferred_facebook_app_id%>&sdk=joey&u=<%=Rails.application.credentials.dig(Rails.env.to_sym, :host) %>/products/<%= @product.name.downcase%>/&display=popup&ref=plugin&src=share_button" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')"><%= image_tag "fb-ico.svg", alt: "" %></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&amp;sdk=joey&amp;u=https%3A%2F%2Fstaging.black-line.ae%2Fproducts%2F<%=@product.slug%>&amp;display=popup&amp;ref=plugin&amp;src=share_button" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')"><%= image_tag "fb-ico.svg", alt: "" %></a>
 <% end %>
